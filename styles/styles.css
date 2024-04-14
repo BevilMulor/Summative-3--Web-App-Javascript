@@ -1,0 +1,117 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+} 
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+} 
+body {
+    margin: 0;
+    font-family: Poppins, 'Source Sans Pro';
+}
+
+.ztext {
+    font-size: 5rem;
+}
+  /* Increase font size for medium screens */
+@media (min-width: 768px) {
+    .ztext {
+        font-size: 6rem;
+    }
+}
+  
+  /* Increase font size for large screens */
+@media (min-width: 992px) {
+    .ztext {
+        font-size: 8rem;
+    }
+}
+/* Header */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    display: none;
+}
+
+#menu-toggle:checked ~ .header .nav-list {
+    display: flex;
+}
+
+#menu-toggle:checked ~ .header .menu-icon {
+    display: none;
+}
+
+.nav-link:hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #d11143;
+    transition: 0.3s ease;
+}
+  
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.photo img {
+    object-fit: contain;
+    mask-image: linear-gradient(to top, transparent 5%, black 25%);
+}
+
+/* dos*/
+.do_icon {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 5%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Interests  */
+.interest_item {
+    width: 50vh;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card, .do_item {
+    transition: transform 0.2s ease-in-out;
+}
+
+.interest_item:hover, .card:hover, .do_item:hover  {
+    transform: scale(1.05);
+}
+
+.interest_item img {
+    max-width: 30rem;
+    object-fit: cover;
+}
+
+/* Footer */
+.icon-style {
+    height: 5rem;
+    margin-left:1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add some hover effects and transitions */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    border-color: #80bdff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #dc3545;
+    transition: background-color 0.15s ease-in-out;
+}
