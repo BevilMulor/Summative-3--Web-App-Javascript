@@ -1,3 +1,66 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    var navItems = document.querySelectorAll('.navbar-nav .nav-item');
+    navItems.forEach(function (item, index) {
+        setTimeout(function () {
+            item.classList.add('slide-in');
+        }, index * 150);
+    });
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var sectionContent = document.querySelectorAll('.section-content');
+    sectionContent.forEach(function(item) {
+        setTimeout(function() {
+            item.classList.add('fade-in');
+        }, 300);
+    });
+
+    var buttons = document.querySelectorAll('.section-content button');
+    buttons.forEach(function(button) {
+        button.addEventListener('mouseenter', function() {
+            button.classList.add('slide-in');
+        });
+
+        button.addEventListener('mouseleave', function() {
+            button.classList.remove('slide-in');
+        });
+    });
+});
+
+
+
+
+
+const cards = document.querySelectorAll('.card-0');
+
+cards.forEach((card) => {
+  const img = card.querySelector('.card-img-top');
+
+  card.addEventListener('mouseenter', () => {
+    img.classList.add('dimmed');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    img.classList.remove('dimmed');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault();
     let name = document.getElementById("name").value.trim();
@@ -32,3 +95,17 @@ document.getElementById("contactForm").addEventListener("submit", function (even
         this.reset();
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

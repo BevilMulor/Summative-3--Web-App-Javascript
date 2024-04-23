@@ -61,6 +61,20 @@ body {
     width: 100%;
 }
 
+
+.navbar-nav .nav-item {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.navbar-nav .nav-item.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 .photo img {
     object-fit: contain;
     mask-image: linear-gradient(to top, transparent 5%, black 25%);
@@ -77,10 +91,6 @@ body {
 
 /* Interests  */
 .interest_item {
-    width: 50vh;
-    margin: 1rem;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -93,7 +103,7 @@ body {
 }
 
 .interest_item img {
-    max-width: 30rem;
+    max-width: 20rem;
     object-fit: cover;
 }
 
@@ -111,7 +121,147 @@ body {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn:hover {
-    background-color: #dc3545;
-    transition: background-color 0.15s ease-in-out;
+
+@media (max-width: 767.98px) {
+    .do_icon, .card-0, .interest_item {
+      width: 15rem;
+      height: 15rem;
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+  .section-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.photo {
+    overflow: hidden;
+}
+
+.photo img {
+    max-width: 100%;
+    transition: transform 0.8s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* CSS for form elements and error messages */
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="text"].valid,
+input[type="email"].valid,
+textarea.valid {
+    border-color: green;
+}
+
+input[type="text"].invalid,
+input[type="email"].invalid,
+textarea.invalid {
+    border-color: red;
+}
+
+
+
+
+
+.card-0 {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+  }
+  
+  .card-0:hover .card-body {
+    opacity: 1;
+  }
+
+
+
+.dimmed {
+    filter: brightness(60%);
+  }
+
+
+
+
+  .interest_item {
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .interest_item:hover {
+    transform: scale(1.05);
+  }
+  
+  .interest_item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+/* CSS */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
